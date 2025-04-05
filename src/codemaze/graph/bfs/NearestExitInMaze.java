@@ -94,4 +94,4 @@ class NearestExitInMaze {
     public boolean isBoundry(int r, int c,int m, int n){
         return r==0 || r==m-1 || c==0 || c==n-1;
     }
-}
+}   
