@@ -35,18 +35,19 @@ class MajorityElement {
         Integer candidate=null;
         int vote=0;
         for(int i=0;i<arr.length;i++){
-            if(vote==0){
+
+            if(candidate!=null && candidate==arr[i])
+                vote++;
+            else if(vote==0){
                 candidate=arr[i];
                 vote=1;
             }
-            else if(candidate==arr[i])
-                vote++;
             else
                 vote--;
         }
         int count=0;
         for(int i=0;i<arr.length;i++){
-           if(candidate==arr[i])
+            if(candidate==arr[i])
                 count++;
         }
         return count>arr.length/2?candidate:-1;
