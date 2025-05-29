@@ -1,4 +1,4 @@
-package codemaze.array.slidingwindow.count;
+package codemaze.array.prefixSum;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -49,6 +49,7 @@ class CountSubArrayWithSumK {
         Map<Integer, Integer> map = new HashMap<>();
         int currSum = 0;
         int count = 0;
+        // Initialize the map with 0 sum to handle the case where a subarray starts from index 0
         map.put(0, 1);
         for (int num : nums) {
             currSum += num;
@@ -58,6 +59,7 @@ class CountSubArrayWithSumK {
         return count;
     }
 
+    // sliding window technique
     public int subarraySumUsingSlidingWindow(int[] nums, int goal) {
         return find(nums, goal) - find(nums, goal - 1);
     }
@@ -69,6 +71,7 @@ class CountSubArrayWithSumK {
         int count = 0;
         while (r < nums.length) {
             sum += nums[r];
+            // If the sum exceeds the goal, move the left pointer to reduce the sum
             while (sum > goal) {
                 sum -= nums[l];
                 l++;

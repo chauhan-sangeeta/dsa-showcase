@@ -1,4 +1,4 @@
-package codemaze.array.slidingwindow.longest.prefixSum;
+package codemaze.array.slidingwindow.longest;
 
 import java.util.HashMap;
 import java.util.Map;
