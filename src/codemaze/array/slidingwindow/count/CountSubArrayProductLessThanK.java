@@ -1,4 +1,4 @@
-package codemaze.array.slidingwindow.countsubarray;
+package codemaze.array.slidingwindow.count;
 
 /*713. Subarray Product Less Than K
         Solved

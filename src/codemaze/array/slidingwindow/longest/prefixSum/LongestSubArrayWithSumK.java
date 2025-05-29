@@ -1,4 +1,4 @@
-package codemaze.array.prefixSum;
+package codemaze.array.slidingwindow.longest.prefixSum;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,11 +31,11 @@ Constraints:
         1 <= nums.length <= 2 * 105
         -104 <= nums[i] <= 104
         -109 <= k <= 109*/
-class MaxSubArrayLen {
+class LongestSubArrayWithSumK {
     public static void main(String[] args) {
         int[] nums = {1, -1, 5, -2, 3};
         int k = 3;
-        MaxSubArrayLen maxSubArrayLen = new MaxSubArrayLen();
+        LongestSubArrayWithSumK maxSubArrayLen = new LongestSubArrayWithSumK();
         int result = maxSubArrayLen.maxSubArrayLen(nums, k);
         System.out.println("The maximum length of a subarray that sums to " + k + " is: " + result);
     }

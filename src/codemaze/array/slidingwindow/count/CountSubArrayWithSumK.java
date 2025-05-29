@@ -1,4 +1,4 @@
-package codemaze.array.slidingwindow.countsubarray;
+package codemaze.array.slidingwindow.count;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,12 +31,12 @@ Constraints:
         1 <= nums.length <= 2 * 104
         -1000 <= nums[i] <= 1000
         -107 <= k <= 107*/
-class CountSubArray {
+class CountSubArrayWithSumK {
     public static void main(String[] args) {
         int[] nums = {1, -1, 5, -2, 3};
         int k = 3;
-        CountSubArray countSubArray = new CountSubArray();
-        int result = countSubArray.subarraySumUsingPrefixSumTechnique(nums, k);
+        CountSubArrayWithSumK countSubArray = new CountSubArrayWithSumK();
+        int result = countSubArray.subarraySumUsingSlidingWindow(nums, k);
         System.out.println("The number of subarrays that sum to " + k + " is: " + result);
     }
 
