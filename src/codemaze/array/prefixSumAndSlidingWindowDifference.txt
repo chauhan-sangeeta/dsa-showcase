@@ -1,0 +1,17 @@
+Rule of Thumb
+Use prefix sum when:
+
+You need to count something (e.g., number of subarrays)
+
+The sum must be exact
+
+You can’t guarantee positive numbers (can manage negative numbers)
+
+Use sliding window when:
+
+The subarray is contiguous
+
+You're tracking min/max window size or at most/at least conditions
+
+The data is mostly positive
+
