@@ -34,6 +34,16 @@ nums is a non-decreasing array.
         -109 <= target <= 109*/
 
 class SearchFirstAndLastPosition {
+    public static void main(String[] args) {
+        int[] nums = {5, 7, 7, 8, 8, 10};
+        int target = 8;
+        SearchFirstAndLastPosition search = new SearchFirstAndLastPosition();
+        int[] result = search.searchRange(nums, target);
+        System.out.println("First and Last Position: [" + result[0] + ", " + result[1] + "]");
+        // Example usage of countOccurrences
+        int count = search.countOccurrences(nums, target);
+        System.out.println("Count of occurrences of " + target + ": " + count);
+    }
 
     // Method to find the first and last position of a target in a sorted array
     public int[] searchRange(int[] nums, int target) {
@@ -102,5 +112,13 @@ class SearchFirstAndLastPosition {
         }
 
         return last;
+    }
+    int countOccurrences(int[] nums, int target) {
+        int first = findFirst(nums, target);
+        if (first == -1) {
+            return 0; // Target not found
+        }
+        int last = findLast(nums, target);
+        return last - first + 1; // Count of occurrences
     }
 }

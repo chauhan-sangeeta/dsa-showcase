@@ -1,0 +1,3 @@
+Lower Bound	>= target	First element ≥ target
+Upper Bound	> target	First element > target is in the condition.
+floor	<= target	Last element ≤ target

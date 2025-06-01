@@ -1,4 +1,5 @@
-package codemaze.array.binarysearch;
+package codemaze.array.binarysearch.basic;
+
 /*35. Search Insert Position
         Solved
 Easy
@@ -33,29 +34,22 @@ nums contains distinct values sorted in ascending order.
 class SearchInsertPosition {
 
     // Method to find the index where the target should be inserted in a sorted array
+    //Lower bound binary search is used to find the first position where the target can be inserted
     public int searchInsert(int[] nums, int target) {
-        int left = 0; // Initialize the left pointer
-        int right = nums.length - 1; // Initialize the right pointer
-
-        // Perform binary search
+        // code here
+        int n = nums.length;
+        int left = 0;
+        int right = n - 1;
+        int start = n;
         while (left <= right) {
-            int mid = left + (right - left) / 2; // Calculate the middle index
-
-            // If the target is found, return its index
-            if (nums[mid] == target) {
-                return mid;
-            }
-            // If the target is greater, search in the right half
-            else if (nums[mid] < target) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] >= target) {
+                start = mid;
+                right = mid - 1;
+            } else {
                 left = mid + 1;
             }
-            // If the target is smaller, search in the left half
-            else {
-                right = mid - 1;
-            }
         }
-
-        // If the target is not found, return the index where it should be inserted
-        return left;
+        return start;
     }
 }
