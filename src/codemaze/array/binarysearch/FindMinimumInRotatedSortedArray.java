@@ -42,6 +42,12 @@ n == nums.length
 All the integers of nums are unique.
 nums is sorted and rotated between 1 and n times.*/
 class FindMinimumInRotatedSortedArray {
+    public static void main(String[] args) {
+        int[] nums = {3, 4, 5, 1, 2};
+        FindMinimumInRotatedSortedArray findMin = new FindMinimumInRotatedSortedArray();
+        int result = findMin.findMin(nums);
+        System.out.println("The minimum element in the rotated sorted array is: " + result);
+    }
     public int findMin(int[] nums) {
         int left =0;
         int right=nums.length-1;
@@ -54,5 +60,20 @@ class FindMinimumInRotatedSortedArray {
             }
         }
         return nums[left];
+    }
+    // This method finds the index of the rotation point in a rotated sorted array.
+    // The rotation point is the index of the smallest element in the array.
+    public int findKRotation(int[] nums) {
+        int left =0;
+        int right=nums.length-1;
+        while(left<right){
+            int mid=left+(right-left)/2;
+            if(nums[mid]>nums[right]){
+                left=mid+1;
+            }else{
+                right=mid;
+            }
+        }
+        return left;
     }
 }
