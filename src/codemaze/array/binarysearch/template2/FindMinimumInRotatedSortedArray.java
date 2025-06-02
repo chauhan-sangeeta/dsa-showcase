@@ -1,4 +1,4 @@
-package codemaze.array.binarysearch;
+package codemaze.array.binarysearch.template2;
 /*153. Find Minimum in Rotated Sorted Array
 Solved
         Medium
