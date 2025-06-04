@@ -59,7 +59,6 @@ class SplitArrayLargestSum {
         }
         return left;
     }
-
     private int getSplit(int[] nums, int sum) {
         int split = 1;
         int subArraySum = 0;
