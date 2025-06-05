@@ -28,10 +28,13 @@ The minimum distance between cows, in this case, is 1, which also is the largest
         0 <= stalls[i] <= 108
         2 <= k <= stalls.size()*/
 class AggressiveCows {
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         int[] stalls = {1, 2, 4, 8, 9};
         int k = 3;
-        int result = aggressiveCows(stalls, k);
+        AggressiveCows solution = new AggressiveCows();
+         // Call the method to find the largest minimum distance
+         // between cows placed in the stalls
+        int result = solution.aggressiveCows(stalls, k);
         System.out.println("The largest minimum distance between cows is: " + result);
     }
 
@@ -42,7 +45,7 @@ class AggressiveCows {
      * @param k - number of cows to place
      * @return the largest minimum distance possible between any two cows
      */
-    public static int aggressiveCows(int[] stalls, int k) {
+    public  int aggressiveCows(int[] stalls, int k) {
         if (stalls == null || stalls.length == 0 || k <= 0) {
             return 0;  // Edge cases: no stalls or invalid number of cows
         }
@@ -84,7 +87,7 @@ class AggressiveCows {
      * @param distance - minimum required distance between cows
      * @return true if possible to place all cows with given distance, else false
      */
-    private static boolean canPlaceCows(int[] stalls, int cows, int distance) {
+    private boolean canPlaceCows(int[] stalls, int cows, int distance) {
         int count = 1;  // Place first cow in the first stall
         int lastPosition = stalls[0];
 
