@@ -59,10 +59,11 @@ class MergeSortedArray {
         }else{
             nums1[k--]=nums1[--m];
         }
-       } 
-       while(m>0){
-            nums1[k--]=nums1[--m];
        }
+       // If there are remaining elements in nums1, they are already in place
+       /* while(m>0){
+            nums1[k--]=nums1[--m];
+       }*/
        while(n>0){
             nums1[k--]=nums2[--n];
        }

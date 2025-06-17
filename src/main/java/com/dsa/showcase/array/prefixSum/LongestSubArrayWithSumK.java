@@ -1,4 +1,4 @@
-package com.dsa.showcase.array.slidingwindow.longest;
+package com.dsa.showcase.array.prefixSum;
 
 import java.util.HashMap;
 import java.util.Map;
