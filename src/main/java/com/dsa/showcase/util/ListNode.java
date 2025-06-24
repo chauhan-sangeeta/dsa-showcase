@@ -1,4 +1,4 @@
-package com.dsa.showcase.array.twodimension.spiral;
+package com.dsa.showcase.util;
 
 public class ListNode {
     public int val;

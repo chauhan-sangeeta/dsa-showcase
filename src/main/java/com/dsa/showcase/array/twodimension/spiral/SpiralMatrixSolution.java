@@ -1,4 +1,6 @@
 package com.dsa.showcase.array.twodimension.spiral;
+import com.dsa.showcase.util.ListNode;
+
 import java.util.Arrays;
 
 public class SpiralMatrixSolution {

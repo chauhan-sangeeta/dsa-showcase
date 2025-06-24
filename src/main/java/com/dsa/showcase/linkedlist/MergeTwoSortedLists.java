@@ -1,6 +1,6 @@
 package com.dsa.showcase.linkedlist;
 
-import com.dsa.showcase.array.twodimension.spiral.ListNode;
+import com.dsa.showcase.util.ListNode;
 
 /*Code
         Testcase
