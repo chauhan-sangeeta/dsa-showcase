@@ -3,14 +3,17 @@ package com.dsa.showcase.linkedlist;
 import com.dsa.showcase.util.ListNode;
 
 public class IsPalindromeLinkedList {
+    public static void main(String[] args) {
+        IsPalindromeLinkedList solution = new IsPalindromeLinkedList();
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        boolean result = solution.isPalindrome(head);
+        System.out.println("Is the linked list a palindrome? " + result); // Expected output: true
+    }
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) return true;
 
         ListNode mid = middleNode(head);
         ListNode secondHalfStart = reverseList(mid);
-
-        // Save pointer to restore later
-        ListNode reversedHead = secondHalfStart;
 
         // Check palindrome
         ListNode p1 = head;
@@ -26,7 +29,7 @@ public class IsPalindromeLinkedList {
         }
 
         // Restore original list
-        reverseList(reversedHead);
+        reverseList(secondHalfStart);
 
         return isPalindrome;
     }
