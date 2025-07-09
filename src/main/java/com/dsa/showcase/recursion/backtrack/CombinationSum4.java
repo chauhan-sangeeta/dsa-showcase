@@ -57,6 +57,7 @@ public class CombinationSum4 {
     }
     //TLE
     //TODO: Memoization and Dynamic Programming can be used to optimize this solution.
+    //Permutation problem [1,2] and [2,1] are counted as separate sequences (order matters).
     public int backtrack(ArrayList<Integer> curr, int[] nums, int n, int target) {
         int count=0;
         if (target < 0) {
