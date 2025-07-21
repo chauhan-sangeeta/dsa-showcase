@@ -60,6 +60,7 @@ public class MyPow {
         return temp;
     }
 
+    //time complexity O(log n) and space complexity O(1)
     public double myPowIterative(double x, int n) {
         long N = n;
         if (N < 0) {
