@@ -85,14 +85,14 @@ public class CountOfSmallerNumbersAfterSelf {
                 indexes[k++] = R[j++];
                 rightCount++;
             } else {
-                indexes[k] = L[i++];
-                count[indexes[k++]] += rightCount;
+                count[L[i]]+=rightCount;
+                indexes[k++]=L[i++];
             }
         }
 
         while (i < n1) {
-            indexes[k] = L[i++];
-            count[indexes[k++]] += rightCount;
+            count[L[i]]+=rightCount;
+            indexes[k++]=L[i++];
         }
         while (j < n2) indexes[k++] = R[j++];
     }
