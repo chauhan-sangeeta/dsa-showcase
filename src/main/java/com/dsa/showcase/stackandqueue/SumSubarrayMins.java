@@ -1,6 +1,6 @@
 package com.dsa.showcase.stackandqueue;
 
-class SumSubarrayMins {
+public class SumSubarrayMins {
     static final int MOD = 1_000_000_007;
 
     //time limit exceeded
