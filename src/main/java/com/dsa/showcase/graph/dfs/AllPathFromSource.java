@@ -1,13 +1,10 @@
 package com.dsa.showcase.graph.dfs;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 class AllPathFromSource {
     List<List<Integer>> result = new ArrayList<>();
-    Deque<Integer> temp = new LinkedList<>();
+    Deque<Integer> temp = new ArrayDeque<>();
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         //dfs to to traverse all path
         dfs(graph,0,graph.length-1);

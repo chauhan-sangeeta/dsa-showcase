@@ -1,5 +1,6 @@
 package com.dsa.showcase.stackandqueue.imp;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -64,7 +65,7 @@ public class TrappingRainWater {
 
     //time complexity O(n) and space complexity O(n)
     public int trapUsingMonotonicStack(int[] height) {
-        Deque<Integer> st = new LinkedList<>();
+        Deque<Integer> st = new ArrayDeque<>();
         int ans = 0;
         for (int i = 0; i < height.length; i++) {
             while (!st.isEmpty() && height[i] > height[st.peek()]) {
