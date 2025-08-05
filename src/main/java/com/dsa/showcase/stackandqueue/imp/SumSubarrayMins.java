@@ -54,6 +54,20 @@ public class SumSubarrayMins {
 
         return res;
     }
+    public long sumSubarrayMinsLongVersion(int[] nums) {
+        int[] nextSmaller = nse(nums);
+        int[] prevSmallerOrEqual = psee(nums);
+        long res = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            int left = i - prevSmallerOrEqual[i];
+            int right = nextSmaller[i] - i;
+            long contribution = (long) nums[i] * left * right;
+            res = res + contribution;
+        }
+
+        return res;
+    }
 
     // Previous Smaller or Equal Element (PSEE)
     public int[] psee(int[] nums) {
